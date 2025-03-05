@@ -1,0 +1,169 @@
+@import url(./reset.css);
+
+/* theme */
+
+header {
+  h1 {
+    background-color: #222;
+    line-height: 8rem;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2em;
+    margin-left: 20px;
+   
+  }
+}
+
+
+.gallery-content {
+  max-width: 90rem;
+  margin: 5rem auto 2rem;
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .gallery-grid li img {
+    width: 100%;
+    filter: drop-shadow(0 0 0.9rem #dc143c);
+  }
+}
+
+
+picture {
+  max-width: 60rem;
+  display: flex;
+  margin: 0 auto 1rem;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+}
+
+
+article {
+  max-width: 80rem;
+  margin: 0 auto 2rem;
+  h2 {
+    width: max-content;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    color: #fff;
+    font-size: x-large;
+  }
+  p {
+    border-top: solid 0.1rem #222;
+    padding: 1rem;
+    background-color: #efecec;
+  }
+}
+
+
+details summary {
+  background-color: #a40909;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  h3 img {
+    filter: invert(100%);
+
+  }
+  
+
+}
+
+
+details ul li {
+  text-transform: uppercase;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+
+details ul li:nth-child(2n + 1) {
+  background-color: #a29bfe;
+  padding: 1rem;
+}
+
+
+details > summary h3::before{
+  content: " +📁 ";
+  color: #fff;
+}
+
+
+details[open] > summary h3::before{
+  content: " -📂 ";
+} 
+
+
+footer * {
+  text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    align-items: center;
+   /* flex-direction: column; */
+}
+
+nav ul{
+    align-items: center;
+    display: flex;
+    padding: 2rem;
+    margin-right: 50px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+nav ul li{
+    height: 100%;
+}
+
+nav li a{
+    color: white;
+    font-size: 20px;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+nav li:hover{
+    transform: scale(1.1);
+    background-color: #42414d;
+}
+
+/* mobile */
+@media screen and (max-width: 90.0rem){
+    
+    body{
+        margin: 1%;
+    }
+
+    header{
+      flex-direction: column; 
+      h1{
+        font-size: 2rem;
+      }
+    }
+    .gallery-content {
+      width: auto;
+      margin: 5rem auto 2rem;
+    
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      
+    }
+    nav ul{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+}
